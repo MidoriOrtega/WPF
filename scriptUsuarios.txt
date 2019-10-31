@@ -1,0 +1,79 @@
+create database usuariosAsesorias
+
+create table calificacion(
+	idCalif		smallint not null primary key,
+	numReview	int)
+
+create table usuario(
+	cu		int not null primary key,
+	nombre		varchar(50),
+	correo		varchar(50),
+	tel		varchar(20),
+	password	varchar(50),
+	idCalif		smallint references calificacion)
+
+create table horario(
+	cu	 int not null, 
+	horarios varchar(50)
+	primary key(cu, horarios))
+
+create table apuntes(
+	idApuntes     	int not null primary key,
+  	materia		varchar(50),
+	profesor	varchar(40),
+	fecha		date,
+	url		varchar(100),
+	cu		int references usuario,
+	idCalif		smallint references calificacion)
+
+create table materia(
+	idMateria	varchar(10) not null primary key,
+	departamento	varchar(30),
+	nombreMateria	varchar(50))
+
+create table peticion(
+	idPeticion	smallint not null primary key,
+	modalidad	varchar(30),
+	fecha 		date,
+	hora		datetime,
+	cuDa		int references usuario,
+	cuRecibe	int references usuario,
+	idMateria	varchar(10) references materia)
+
+create table asesoria(
+	idAsesoria	smallint not null,
+	fecha		date,
+	hora		datetime,
+	lugar		varchar(30),
+	modalidad	varchar(30),
+	idPeticion	smallint not null references peticion,
+	cu		int references usuario,
+	primary key(idAsesoria,idPeticion))
+
+create table review(
+	idReview	smallint not null primary key,
+	descripcion	varchar(300),
+	idCalif 	smallint references calificacion,
+	cu		int references usuario)
+	
+create table usuario_materia(
+	cu 			int not null references usuario,
+	idMateria 		varchar(10) not null references materia,
+	numAsesorias		smallint,
+	numHoras 		smallint,
+	numHorasServicioSocial	smallint,
+	primary key(cu, idMateria))
+
+
+insert into usuario values(181866, 'Damian Hernandez', 'dhdz@itam.mx', '52100101', '1234', null)
+insert into usuario values(171955, 'Rodrigo Mendoza', 'rmen@itam.mx', '52123542', '1940', null)
+insert into horario values(181866, 'Lunes y viernes 10-12')
+insert into horario values(181866, 'Martes y jueves 14-19')
+insert into horario values(181866, 'Lunes y viernes 8-14')
+insert into horario values(181866, 'Martes y jueves 13-15')
+insert into materia values('EGN-17141', 'Estudios Generales', 'Ideas I')
+insert into materia values('ECO-11101', 'Economía', 'Economía I')
+insert into materia values('MAT-14100', 'Matemáticas', 'Cálculo Diferencial e Integral I')
+insert into usuario_materia values(181866, 'MAT-14100', 0, 0, 0)
+insert into usuario_materia values(171955, 'EGN-17141', 0, 0, 0)
+insert into usuario_materia values(171955, 'ECO-11101', 0, 0, 0)

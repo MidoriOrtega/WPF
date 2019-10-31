@@ -1,0 +1,185 @@
+﻿<Window x:Class="AsesoriasADMIN.Alta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsesoriasADMIN"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Alta" Height="474.856" Width="450" FontFamily="Arial Rounded MT Bold" FontSize="14">
+    <Grid Background="#FF699954" Margin="0,0,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblCU" Content="Clave Única:" HorizontalAlignment="Left" Margin="38,32,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Sitka Heading" Height="28" Width="82"/>
+        <Label x:Name="lblNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="38,88,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Sitka Heading" Height="28" Width="61"/>
+        <Label x:Name="lblCorreo" Content="Correo:" HorizontalAlignment="Left" Margin="38,145,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Sitka Heading" Height="28" Width="54"/>
+        <Label x:Name="lblTel" Content="Teléfono:" HorizontalAlignment="Left" Margin="38,208,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Sitka Heading" Height="28" Width="64"/>
+        <Label x:Name="lblPassword" Content="Contraseña:" HorizontalAlignment="Left" Margin="38,270,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Sitka Heading" Height="28" Width="80" RenderTransformOrigin="0.488,0.286"/>
+        <TextBox x:Name="txtCU" HorizontalAlignment="Left" Height="23" Margin="70,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="70,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="70,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" RenderTransformOrigin="0.575,2.913"/>
+        <TextBox x:Name="txtTel" HorizontalAlignment="Left" Height="23" Margin="70,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="70,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <Button x:Name="btnAgregar" Content="AGREGAR" HorizontalAlignment="Left" Margin="38,330,0,0" VerticalAlignment="Top" Width="94" Height="32" FontSize="12" RenderTransformOrigin="0.489,1.625" Grid.ColumnSpan="2" Click="btnAgregar_Click"/>
+        <Button x:Name="btnRegresar" Content="REGRESAR" HorizontalAlignment="Left" Margin="38,382,0,0" VerticalAlignment="Top" Width="94" Height="32" Grid.ColumnSpan="2" FontSize="12" Click="btnRegresar_Click"/>
+        <Label x:Name="lblMensaje" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="70,359,0,0" VerticalAlignment="Top" Width="141" FontSize="10"/>
+
+
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="329,42,-4,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="37" RenderTransformOrigin="0.696,0.455" FontSize="10"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,80,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="22" Width="56" FontSize="20" Opacity="0.5"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="286,3,-13,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="34" Width="89" FontSize="30"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,37,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="52" Width="94" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="240,338,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="31" Width="78" FontSize="30" RenderTransformOrigin="0.587,0.315">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.642"/>
+                    <TranslateTransform X="-12.48" Y="-1.085"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="286,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="268,143,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="23" Width="56" FontSize="20" Opacity="0.5" RenderTransformOrigin="0.536,0.409"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,10,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="22" Width="56" FontSize="20" Opacity="0.5" RenderTransformOrigin="-0.13,0.591"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="329,56,-4,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="37" RenderTransformOrigin="0.696,0.455" FontSize="10" Opacity="0.8"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="329,70,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="33" RenderTransformOrigin="0.696,0.455" FontSize="10" Opacity="0.6"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="263,110,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="34" Width="89" FontSize="30"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="315,102,-19,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="25" Width="66" FontSize="25" RenderTransformOrigin="1.64,0.918" Opacity="0.8">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.948"/>
+                    <TranslateTransform X="-63.629" Y="-85.52"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,184,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="52" Width="94" FontSize="36"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="268,166,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="23" Width="56" FontSize="20" Opacity="0.8" RenderTransformOrigin="0.536,0.409"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="286,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="311,83,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="26" RenderTransformOrigin="0.696,0.455" FontSize="10">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="268.305"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="289,176,-35,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="48" Width="108" FontSize="40" RenderTransformOrigin="0.5,0.5" Opacity="0.8">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.377"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,226,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="22" Width="56" FontSize="20" Opacity="0.5" RenderTransformOrigin="-0.13,0.591"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="286,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="286,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,248,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="22" Width="56" FontSize="20" Opacity="0.8"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="272,275,-4,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="52" Width="94" FontSize="36" RenderTransformOrigin="0.521,0.942" Opacity="0.5"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="321,258,-4,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="207,288,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="25" Width="66" FontSize="25" RenderTransformOrigin="1.64,0.918" Opacity="0.8">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.948"/>
+                    <TranslateTransform X="-63.629" Y="-85.52"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="289,264,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="26" RenderTransformOrigin="0.696,0.455" FontSize="10">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="360.282"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,288,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="25" Width="66" FontSize="25" RenderTransformOrigin="1.64,0.918" Opacity="0.6">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.948"/>
+                    <TranslateTransform X="-63.629" Y="-85.52"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="281,310,-13,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="35" Width="94" FontSize="30" RenderTransformOrigin="0.521,0.942"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="306,368,-22,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="31" Width="78" FontSize="30" RenderTransformOrigin="0.587,0.315">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.829"/>
+                    <TranslateTransform X="-12.48" Y="-1.085"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="203,130,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="31" Width="78" FontSize="30" RenderTransformOrigin="0.587,0.315">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.829"/>
+                    <TranslateTransform X="-12.48" Y="-1.085"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="304,345,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="37" RenderTransformOrigin="0.696,0.455" FontSize="10"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="304,359,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="37" RenderTransformOrigin="0.696,0.455" FontSize="10" Opacity="0.8"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="304,373,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="14" Width="33" RenderTransformOrigin="0.696,0.455" FontSize="10" Opacity="0.6"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="321,423,-4,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45"><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,368,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="23" Width="56" FontSize="20" Opacity="0.5" RenderTransformOrigin="0.536,0.409"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,391,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="23" Width="56" FontSize="20" Opacity="0.8" RenderTransformOrigin="0.536,0.409"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="230,417,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="23" Width="56" FontSize="20" RenderTransformOrigin="0.536,0.409"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="345,505,-28,-90" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="45" FontSize="16" RenderTransformOrigin="1.64,0.918" Opacity="0.8" Text="ITAM">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.09"/>
+                    <TranslateTransform X="-63.629" Y="-85.52"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="264,380,0,0" TextWrapping="Wrap" Text="ITAM" VerticalAlignment="Top" Height="22" Width="56" FontSize="20" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.887"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="289,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-91.621"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="ITA"/><Run Text="M"/></TextBlock>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="304,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="45" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.783"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="ITA"/><Run Text="M"/></TextBlock>
+    </Grid>
+</Window>

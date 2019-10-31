@@ -1,0 +1,11 @@
+create database administracion
+
+create table administrador
+	(claveU int not null primary key,
+	usuario varchar(50),
+	contra varchar(50))
+
+insert into administrador values (181866, 'cdelga', '1234')
+insert into administrador values (123456, 'rcafel', '4567')
+insert into administrador values (132145, 'ysanchez', '7891')
+insert into administrador values (922815, 'rfonseca', '1314')

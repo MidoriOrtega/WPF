@@ -1,0 +1,41 @@
+﻿<Window x:Class="AsesoriasADMIN.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsesoriasADMIN"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Administrador" Height="480" Width="550">
+    <Grid Background="#FFCB7373" Margin="0,0,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="-1,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFD85353"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="-1,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFCF6868"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="52,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFCF6868"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="-1,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFDA4444"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="-1,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFDA3333"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="52,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFD85353"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="52,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFDA4444"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="105,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFCF6868"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="105,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFD85353"/>
+        <TextBox HorizontalAlignment="Left" Height="46" Margin="158,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Background="#FFCF6868"/>
+
+        <Label x:Name="lblCU" Content="Clave Única (BAJA):" HorizontalAlignment="Left" Margin="47,35,0,0" VerticalAlignment="Top" Height="31" Width="178" FontSize="20" FontFamily="Sitka Heading"/>
+        <TextBox x:Name="txtCU" HorizontalAlignment="Left" Height="31" Margin="47,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+        <Label x:Name="lblNombre" Content="Nombre (BUSCA):" HorizontalAlignment="Left" Margin="47,130,0,0" VerticalAlignment="Top" Height="31" Width="159" FontSize="20" FontFamily="Sitka Heading"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="31" Margin="47,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+        <Button x:Name="btnAlta" Content="ALTA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="67,100,0,0" Height="50" Click="btnAlta_Click" Grid.Column="1"/>
+        <Button x:Name="btnBaja" Content="BAJA" HorizontalAlignment="Left" Margin="267,51,0,0" VerticalAlignment="Top" Width="100" Height="50" Grid.ColumnSpan="2" Click="btnBaja_Click"/>
+        <Button x:Name="btnBusca" Content="BUSCA" HorizontalAlignment="Left" Margin="267,146,0,0" VerticalAlignment="Top" Width="100" Height="50" Click="btnBusca_Click" RenderTransformOrigin="0.017,0.906" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblMensaje" Content="" HorizontalAlignment="Left" Height="29" Margin="47,227,0,0" VerticalAlignment="Top" Width="414" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dgMuestra" HorizontalAlignment="Left" Margin="86,268,0,52" Width="414" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSalir" Content="SALIR" HorizontalAlignment="Left" Height="23" Margin="92,415,0,0" VerticalAlignment="Top" Width="75" Click="btSalir_Click" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
