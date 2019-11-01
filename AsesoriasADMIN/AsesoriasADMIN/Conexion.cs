@@ -15,7 +15,8 @@ namespace AsesoriasADMIN
             SqlConnection cnn = null;
             try
             {
-                cnn = new SqlConnection("Data Source=localhost;Initial Catalog=administracion;Integrated Security=True");
+            cnn = new SqlConnection("Data Source=DESKTOP-285NFBG\\SQLEXPRESS;Initial Catalog=administracion;Persist Security Info=True;User ID=sa;Password=sqladmin");
+          //cnn = new SqlConnection("Data Source=localhost;Initial Catalog=administracion;Integrated Security=True");
                 cnn.Open();
             }
             catch (Exception ex)
@@ -30,7 +31,8 @@ namespace AsesoriasADMIN
             SqlConnection cnn = null;
             try
             {
-                cnn = new SqlConnection("Data Source=localhost;Initial Catalog=usuariosAsesorias;Integrated Security=True");
+            cnn = new SqlConnection("Data Source=DESKTOP-285NFBG\\SQLEXPRESS;Initial Catalog=usuariosAsesorias;Persist Security Info=True;User ID=sa;Password=sqladmin");
+            //cnn = new SqlConnection("Data Source=localhost;Initial Catalog=usuariosAsesorias;Integrated Security=True");
                 cnn.Open();
             }
             catch (Exception ex)

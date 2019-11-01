@@ -50,7 +50,7 @@ namespace AsesoriasADMIN
             {                
                 SqlConnection con;
                 con = Conexion.conectarUsuario();
-                SqlCommand cmd = new SqlCommand(String.Format("insert into usuario values({0}, '{1}', '{2}', '{3}', '{4}', null)", u.claveUnica, u.nombre, u.correo, u.telefono, u.password), con);
+                SqlCommand cmd = new SqlCommand(String.Format("insert into usuario values({0}, '{1}', '{2}', '{3}', '{4}')", u.claveUnica, u.nombre, u.correo, u.telefono, u.password), con);
                 res = cmd.ExecuteNonQuery();
                 con.Close();                
             }

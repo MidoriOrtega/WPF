@@ -10,7 +10,7 @@ create table usuario(
 
 create table horario(
 	cu	int not null, 
-	dia 	varchar(10)
+	dia 	varchar(10),
 	hora	varchar(20)
 	primary key(cu, dia, hora)
 )
@@ -40,7 +40,7 @@ create table asesoria(
 	hora		datetime,
 	lugar		varchar(30),
 	modalidad	varchar(30),
-	status		char(2)
+	status		char(2),
 	cuAsesor	int references usuario,
 	cuAsesorado	int references usuario,
 	idMateria	varchar(10) references materia
@@ -48,7 +48,7 @@ create table asesoria(
 
 create table resenia(
 	idResenia 	int not null primary key,
-	tipo		char(1)
+	tipo		char(1),
 	calificacion	smallint,
 	descripcion	varchar(400),
 	cuEscribe	int references usuario,
