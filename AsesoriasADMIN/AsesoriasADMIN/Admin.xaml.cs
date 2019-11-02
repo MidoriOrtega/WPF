@@ -33,10 +33,16 @@ namespace AsesoriasADMIN
 
         private void btnBaja_Click(object sender, RoutedEventArgs e)
         {
-            int res;
+            int res = 0;
             Usuario u;
-            u = new Usuario(Int32.Parse(txtCU.Text));
-            res = u.baja(u);
+            try
+            {
+                u = new Usuario(Int32.Parse(txtCU.Text));
+                res = u.baja(u);
+            }
+            catch(Exception ex)
+            {
+            }
             if (res > 0)
                 lblMensaje.Content = "Se dio de baja";
             else
@@ -45,10 +51,17 @@ namespace AsesoriasADMIN
 
         private void btnBusca_Click(object sender, RoutedEventArgs e)
         {
-            Usuario u = new Usuario(txtNombre.Text);
-            List<Usuario> l = new List<Usuario>();
-            l = u.busca(u);
-            dgMuestra.ItemsSource = l;
+            try
+            {
+                Usuario u = new Usuario(txtNombre.Text);
+                List<Usuario> l = new List<Usuario>();
+                l = u.busca(u);
+                dgMuestra.ItemsSource = l;
+            }
+            catch(Exception ex)
+            {
+                lblMensaje.Content = "ERROR";
+            }
         }
 
         private void btSalir_Click(object sender, RoutedEventArgs e)

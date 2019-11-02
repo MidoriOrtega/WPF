@@ -5,7 +5,7 @@ create table usuario(
 	nombre		varchar(50),
 	correo		varchar(50),
 	telefono	varchar(20),
-	contrasenia 	varchar(50)
+	password	varchar(50)
 )
 
 create table horario(
@@ -18,7 +18,7 @@ create table horario(
 create table materia(
 	idMateria	varchar(10) not null primary key,
 	departamento	varchar(30),
-	nombreMateria	varchar(50)
+	nombre		varchar(50)
 )
 
 create table usuario_materia(
@@ -46,8 +46,8 @@ create table asesoria(
 	idMateria	varchar(10) references materia
 )
 
-create table resenia(
-	idResenia 	int not null primary key,
+create table review(
+	idReview 	int not null primary key,
 	tipo		char(1),
 	calificacion	smallint,
 	descripcion	varchar(400),

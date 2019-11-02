@@ -14,7 +14,6 @@ namespace AsesoriasADMIN
         public String correo { get; set; }
         public String telefono { get; set; }
         public String password { get; set; }
-        public Int16 idCalif { get; set; }
 
         public Usuario()
         {
@@ -38,11 +37,6 @@ namespace AsesoriasADMIN
             this.password = password;
         }
 
-        public Usuario(int claveUnica, string nombre, string correo, string telefono, string password, short idCalif) : this(claveUnica, nombre, correo, telefono, password)
-        {
-            this.idCalif = idCalif;
-        }
-
         public int alta(Usuario u)
         {
             int res = 0;
@@ -63,11 +57,17 @@ namespace AsesoriasADMIN
         public int baja(Usuario u)
         {
             int res = 0;
-            SqlConnection con;
-            con = Conexion.conectarUsuario();
-            SqlCommand cmd = new SqlCommand(String.Format("delete from usuario where cu = {0}", u.claveUnica), con);
-            res = cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                SqlConnection con;
+                con = Conexion.conectarUsuario();
+                SqlCommand cmd = new SqlCommand(String.Format("delete from usuario where cu = {0}", u.claveUnica), con);
+                res = cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch(Exception ex)
+            {
+            }
             return res;
         }
 
@@ -76,33 +76,31 @@ namespace AsesoriasADMIN
             SqlDataReader drd;
             List<Usuario> lis = new List<Usuario>();
             Usuario aux;
-            SqlConnection con;
-            con = Conexion.conectarUsuario();
-            SqlCommand cmd = new SqlCommand(String.Format("select * from usuario where nombre like '%{0}%'", u.nombre), con);
-            drd = cmd.ExecuteReader();
-            while (drd.Read())
+            try
             {
-                aux = new Usuario();
-                aux.claveUnica = drd.GetInt32(0);
-                aux.nombre = drd.GetString(1);
-                aux.correo = drd.GetString(2);
-                aux.telefono = drd.GetString(3);
-                aux.password = drd.GetString(4);
-                try
+                SqlConnection con;
+                con = Conexion.conectarUsuario();
+                SqlCommand cmd = new SqlCommand(String.Format("select * from usuario where nombre like '%{0}%'", u.nombre), con);
+                drd = cmd.ExecuteReader();
+                while (drd.Read())
                 {
-                    aux.idCalif = drd.GetInt16(5);
+                    aux = new Usuario();
+                    aux.claveUnica = drd.GetInt32(0);
+                    aux.nombre = drd.GetString(1);
+                    aux.correo = drd.GetString(2);
+                    aux.telefono = drd.GetString(3);
+                    aux.password = drd.GetString(4);
+                    lis.Add(aux);
                 }
-                catch (Exception e)
-                {
-                    aux.idCalif = 0;
-                }
-                lis.Add(aux);
+                drd.Close();
+                con.Close();
             }
-            drd.Close();
-            con.Close();
+            catch(Exception ex)
+            {
+            }
             return lis;
         }
 
-    }
 
+    }
 }

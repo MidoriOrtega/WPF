@@ -47,12 +47,6 @@ namespace AsesoriasADMIN
             btnEntrar.Background = new SolidColorBrush(Colors.Green);
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            txtUsuario.Text = "cdelga";
-            txtPassword.Password = "1234";
-        }
-
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
             txtUsuario.Text = "cdelga";

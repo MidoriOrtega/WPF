@@ -26,10 +26,16 @@ namespace AsesoriasADMIN
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
-            int res;
+            int res = 0;
             Usuario u;
-            u = new Usuario(Int32.Parse(txtCU.Text), txtNombre.Text, txtCorreo.Text, txtTel.Text, txtPassword.Text);
-            res = u.alta(u);
+            try
+            {
+                u = new Usuario(Int32.Parse(txtCU.Text), txtNombre.Text, txtCorreo.Text, txtTel.Text, txtPassword.Text);
+                res = u.alta(u);
+            }
+            catch (Exception ex)
+            {
+            }
             if (res > 0)
                 lblMensaje.Content = "Se dio de alta";
             else
