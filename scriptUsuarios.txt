@@ -60,8 +60,7 @@ create table reviewApunte(
 	idReview 	int not null primary key,
 	calificacion	smallint,
 	descripcion	varchar(400),
-	url		varchar(200) references apunte,
-	idMateria	varchar(10) references materia
+	url		varchar(200) references apunte
 )
 
 insert into usuario values(181866, 'Carlos Delgado', 'cdelga17@itam.mx', '52100101', '1234')
