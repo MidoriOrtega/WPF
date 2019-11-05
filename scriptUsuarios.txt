@@ -46,14 +46,22 @@ create table asesoria(
 	idMateria	varchar(10) references materia
 )
 
-create table review(
+create table reviewUsuario(
 	idReview 	int not null primary key,
 	tipo		char(1),
 	calificacion	smallint,
 	descripcion	varchar(400),
 	cuEscribe	int references usuario,
 	cuRecibe	int references usuario,
-	url		varchar(200) references apunte
+	idMateria	varchar(10) references materia
+)
+
+create table reviewApunte(
+	idReview 	int not null primary key,
+	calificacion	smallint,
+	descripcion	varchar(400),
+	url		varchar(200) references apunte,
+	idMateria	varchar(10) references materia
 )
 
 insert into usuario values(181866, 'Carlos Delgado', 'cdelga17@itam.mx', '52100101', '1234')
@@ -77,5 +85,6 @@ insert into asesoria values(1, '20191106', '10-12', 'Salas de Ing', 'Dinero', 'a
 insert into asesoria values(2, '20191110', '11-12', 'Biblioteca', 'Dinero', 'ac', 181866, 181272,  'ECO-11101')
 insert into asesoria values(3, '20191112', '10-14', 'Salas de Ing', 'Dinero', 'ac', 181272, 181866,  'MAT-14100')
 
-insert into review (idReview, tipo, calificacion, descripcion, cuEscribe, cuRecibe) values(1, 'a', 10, 'Excelente explicando', 181866, 181272)
-insert into review (idReview, tipo, calificacion, descripcion, cuEscribe, cuRecibe) values(2, 'u', 10, 'Excelentes preguntas', 181866, 181272)
+insert into reviewUsuario values(1, 'a', 10, 'Excelente explicando', 181866, 181272, 'ECO-11101')
+insert into reviewUsuario values(2, 'u', 10, 'Excelentes preguntas', 181866, 181272, 'MAT-14100')
+
