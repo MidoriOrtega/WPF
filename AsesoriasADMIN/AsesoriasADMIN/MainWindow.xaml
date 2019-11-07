@@ -7,21 +7,21 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Asesorías ITAM" Height="289" Width="458.471" Loaded="Window_Loaded_1" >
-    <Grid Background="#FF92998F" HorizontalAlignment="Left" Width="448">
+    <Grid Background="#FF92998F" HorizontalAlignment="Left" Width="448" RenderTransformOrigin="0.521,0.93">
         <Grid.RowDefinitions>
             <RowDefinition Height="131*"/>
             <RowDefinition Height="130*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="173*"/>
-            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblUsuario" Content="Usuario :" HorizontalAlignment="Left" Margin="45,42,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="36"/>
-        <Label x:Name="lblPassword" Content="Contraseña :" HorizontalAlignment="Left" Margin="45,89,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="36" Grid.RowSpan="2"/>
-        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="35" Margin="266,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Grid.ColumnSpan="2" FontSize="24"/>
-        <Button x:Name="btnEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="276,50,0,0" VerticalAlignment="Top" Width="122" Click="Button_Click" Background="#FFF7F3F3" Height="34" Grid.ColumnSpan="2" FontSize="22" Grid.Row="1" />
-        <Label x:Name="lblMensaje" Content="" HorizontalAlignment="Left" Margin="247,10,0,0" VerticalAlignment="Top" Width="191" Height="40" FontSize="16" Grid.ColumnSpan="2" Grid.Row="1"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="266,101,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="153" Height="33" FontSize="24" Grid.RowSpan="2"/>
+        <Label x:Name="lblUsuario" Content="Usuario :" HorizontalAlignment="Left" Margin="45,42,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="36" Height="55" Width="146"/>
+        <Label x:Name="lblPassword" Content="Contraseña :" HorizontalAlignment="Left" Margin="45,89,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="36" Grid.RowSpan="2" Height="55" Width="199"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="35" Margin="266,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" FontSize="24"/>
+        <Button x:Name="btnEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="276,50,0,0" VerticalAlignment="Top" Width="122" Click="Button_Click" Background="#FFF7F3F3" Height="34" FontSize="22" Grid.Row="1" />
+        <Label x:Name="lblMensaje" Content="" HorizontalAlignment="Left" Margin="247,10,0,0" VerticalAlignment="Top" Width="191" Height="40" FontSize="16" Grid.Row="1"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="266,101,0,0" VerticalAlignment="Top" Width="153" Height="33" FontSize="24" Grid.RowSpan="2"/>
         <Image HorizontalAlignment="Left" Height="85" Margin="45,20,0,0" VerticalAlignment="Top" Width="99" Source="imagen/colmillo.png" Grid.Row="1"/>
 
     </Grid>

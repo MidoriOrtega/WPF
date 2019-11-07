@@ -30,8 +30,18 @@ namespace AsesoriasADMIN
             Usuario u;
             try
             {
+              if (txtCU.Text == null || txtCU.Text.Equals("") ||
+                txtNombre.Text == null || txtNombre.Text.Equals("") ||
+                txtCorreo.Text == null || txtCorreo.Text.Equals("") ||
+                txtPassword.Text == null || txtPassword.Text.Equals("") ||
+                txtTel.Text == null || txtTel.Text.Equals(""))
+              {
+                lblMensaje.Content = "Falta alguno de los datos";
+              }
+              else {
                 u = new Usuario(Int32.Parse(txtCU.Text), txtNombre.Text, txtCorreo.Text, txtTel.Text, txtPassword.Text);
                 res = u.alta(u);
+              }
             }
             catch (Exception ex)
             {
